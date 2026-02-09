@@ -1,0 +1,155 @@
+{
+  "identity": {
+    "persona": "E1: The Anti-AI Designer",
+    "mission": "Create a warm, accessible, and dignified medication tracking experience for the elderly, rejecting cold clinical aesthetics.",
+    "principles": [
+      "Clarity is Kindness: Big text, high contrast, no ambiguity.",
+      "Warmth over Tech: Use organic colors and textures, not 'SaaS Blue'.",
+      "Forgiving Design: Big touch targets, clear error states, voice-first options.",
+      "Companionship: The app should feel like a helper, not a monitor."
+    ]
+  },
+  "typography": {
+    "primary_font": "Lexend",
+    "secondary_font": "Mulish",
+    "scale": {
+      "h1": "text-4xl md:text-5xl font-bold tracking-tight leading-tight",
+      "h2": "text-3xl md:text-4xl font-semibold tracking-tight",
+      "h3": "text-2xl md:text-3xl font-semibold",
+      "body_large": "text-xl leading-relaxed",
+      "body_default": "text-lg leading-relaxed",
+      "caption": "text-base font-medium text-muted-foreground"
+    },
+    "instructions": "Import 'Lexend' and 'Mulish' from Google Fonts. Use Lexend for all Headings to improve reading proficiency. Use Mulish for body text. BASE TEXT SIZE MUST BE 18px (text-lg) MINIMUM."
+  },
+  "colors": {
+    "palette_name": "Organic & Earthy (Trust, Growth, Calm)",
+    "mode": "light",
+    "background": {
+      "default": "hsl(40, 20%, 97%)",
+      "paper": "hsl(0, 0%, 100%)",
+      "subtle": "hsl(40, 20%, 94%)"
+    },
+    "foreground": {
+      "default": "hsl(220, 40%, 15%)",
+      "muted": "hsl(220, 20%, 40%)",
+      "inverse": "hsl(0, 0%, 100%)"
+    },
+    "primary": {
+      "default": "hsl(10, 70%, 55%)",
+      "foreground": "hsl(0, 0%, 100%)",
+      "hover": "hsl(10, 70%, 45%)",
+      "description": "Terracotta/Deep Coral. High visibility, warm, urgent but not alarming. Use for Main Actions (Add Med, Emergency)."
+    },
+    "secondary": {
+      "default": "hsl(150, 30%, 40%)",
+      "foreground": "hsl(0, 0%, 100%)",
+      "description": "Sage Green. Use for Success states, 'Taken' status, and health indicators."
+    },
+    "accent": {
+      "default": "hsl(45, 90%, 60%)",
+      "foreground": "hsl(220, 40%, 15%)",
+      "description": "Warm Ochre/Yellow. Use for reminders and highlights."
+    },
+    "border": "hsl(220, 20%, 85%)",
+    "status": {
+      "error": "hsl(0, 70%, 60%)",
+      "success": "hsl(150, 40%, 45%)",
+      "warning": "hsl(35, 90%, 60%)"
+    }
+  },
+  "layout": {
+    "container": "max-w-5xl mx-auto px-6 md:px-8 py-8",
+    "grid_strategy": "Bento Grid Mode A (Modified for Low Density)",
+    "spacing": {
+      "section_gap": "gap-12",
+      "item_gap": "gap-6",
+      "internal_padding": "p-6 md:p-8"
+    },
+    "rules": [
+      "Mobile First: Stack everything on mobile.",
+      "Touch Targets: Minimum 48px x 48px for all interactive elements.",
+      "Cards: Use 'border-2' and 'rounded-xl' or 'rounded-2xl' for friendly, distinct shapes.",
+      "No Clutter: One primary action per screen if possible."
+    ]
+  },
+  "components": {
+    "buttons": {
+      "style": "rounded-full font-bold text-lg h-14 px-8 shadow-md hover:shadow-lg transition-all active:scale-95",
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90",
+      "secondary": "bg-white border-2 border-primary text-primary hover:bg-primary/10"
+    },
+    "cards": {
+      "style": "bg-white border-2 border-border rounded-2xl shadow-sm hover:border-primary/50 transition-colors p-6"
+    },
+    "inputs": {
+      "style": "h-14 text-lg px-4 rounded-xl border-2 border-input focus:border-primary focus:ring-2 focus:ring-primary/20 bg-white"
+    },
+    "navigation": {
+      "mobile": "Fixed bottom bar, h-20, large icons (32px), labels always visible.",
+      "desktop": "Simple top bar, large text links."
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Subtle paper grain overlay (opacity 0.03) on background to reduce digital harshness.",
+    "shadows": "Soft, diffuse shadows (shadow-lg) for floating elements like the 'Voice' button.",
+    "icons": "Use 'Phosphor Icons' (Duotone or Fill) for clarity. Icon size: w-8 h-8 minimum."
+  },
+  "image_urls": {
+    "hero_elderly": {
+      "url": "https://images.unsplash.com/photo-1552666146-a8b42692780a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwxfHxoYXBweSUyMGVsZGVybHklMjBwZXJzb24lMjBnYXJkZW5pbmclMjBvciUyMHdhbGtpbmd8ZW58MHx8fHwxNzcwNjIyNjI1fDA&ixlib=rb-4.1.0&q=85",
+      "description": "Active elderly man walking, conveying health and independence.",
+      "category": "hero"
+    },
+    "doctor_consult": {
+      "url": "https://images.unsplash.com/photo-1659353888096-cc5e333db5e0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NjV8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmcmllbmRseSUyMGNvbnN1bHRhdGlvbnxlbnwwfHx8fDE3NzA2MjI2Mjl8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Friendly doctor with clipboard, for the 'Doctor Communication' section.",
+      "category": "content"
+    },
+    "healthy_lunch": {
+      "url": "https://images.unsplash.com/photo-1692073613792-58c6c76df758?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwxfHxoZWFsdGh5JTIwbHVuY2glMjBhbmQlMjB3YXRlciUyMGdsYXNzfGVufDB8fHx8MTc3MDYyMjYzNHww&ixlib=rb-4.1.0&q=85",
+      "description": "Fresh salad bowl, for the 'Daily Tracker' lunch section.",
+      "category": "content"
+    },
+    "water_glass": {
+      "url": "https://images.unsplash.com/photo-1741950903475-db73851a32be?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzZ8MHwxfHNlYXJjaHwyfHxoZWFsdGh5JTIwbHVuY2glMjBhbmQlMjB3YXRlciUyMGdsYXNzfGVufDB8fHx8MTc3MDYyMjYzNHww&ixlib=rb-4.1.0&q=85",
+      "description": "Clear glass of water, for the 'Water Intake' tracker.",
+      "category": "content"
+    }
+  },
+  "accessibility": {
+    "contrast": "Ensure 4.5:1 minimum contrast for all text. Use APCA where possible.",
+    "voice_ui": "Implement a large, floating 'Microphone' button (FAB) on the dashboard for voice commands.",
+    "screen_reader": "All images must have descriptive alt text. All buttons must have aria-labels."
+  },
+  "instructions_to_main_agent": [
+    "1. SETUP: Install 'lucide-react' (default) or 'phosphor-react' (preferred). Install 'clsx' and 'tailwind-merge' for class management.",
+    "2. THEME: Update 'tailwind.config.js' and 'index.css' with the 'Organic & Earthy' palette defined above. FORCE LIGHT MODE default.",
+    "3. FONTS: Add Google Fonts import for Lexend and Mulish in 'index.css'.",
+    "4. COMPONENTS: When using Shadcn components, OVERRIDE the default small sizes. Increase padding (p-4 -> p-6), font-size (text-sm -> text-lg), and border-radius.",
+    "5. LAYOUT: Build the Dashboard using the 'Bento Grid' strategy but keep it simple (1-2 columns on mobile, 3 on desktop).",
+    "6. VOICE: The Voice Recognition feature is key. Make the trigger button prominent and accessible.",
+    "7. DO NOT use gradients for text or backgrounds. Keep it flat, textured, and high-contrast.",
+    "8. DATA-TESTID: Add 'data-testid' to every interactive element (buttons, inputs, links)."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur) ONLY for overlays, not main content (readability first).",
+    "You MUST NOT apply universal transition. Eg: 'transition: all'. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add '.App { text-align: center; }' in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "NEVER: use AI assistant Emoji characters like 🤖🧠💭💡🔮🎯📚🎭🎬🎪🎉🎊🎁🎀🎂🍰🎈🎨🎰💰💵💳🏦💎🪙💸🤑📊📈📉💹🔢🏆🥇 etc for icons.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN",
+    "Prioritize using pre-existing components from src/components/ui when applicable",
+    "Create new components that match the style and conventions of existing components when needed",
+    "Examine existing components to understand the project's component patterns before creating new ones",
+    "Components MUST use named exports (export const ComponentName = ...)",
+    "Pages MUST use default exports (export default function PageName() {...})",
+    "Use 'sonner' for toasts. Sonner component are located in '/app/src/components/ui/sonner.tsx'"
+  ]
+}
