@@ -284,22 +284,22 @@ async def get_today_tracker(current_user: dict = Depends(get_current_user)):
     }
 
 @api_router.post("/tracker/water")
-async def track_water(glasses: int, current_user: dict = Depends(get_current_user)):
+async def track_water(request: WaterIntakeRequest, current_user: dict = Depends(get_current_user)):
     today = datetime.now(timezone.utc).date().isoformat()
     await db.water_intake.update_one(
         {"user_email": current_user["email"], "date": today},
-        {"$set": {"glasses": glasses, "date": today, "user_email": current_user["email"]}},
+        {"$set": {"glasses": request.glasses, "date": today, "user_email": current_user["email"]}},
         upsert=True
     )
     return {"message": "Water intake tracked successfully"}
 
 @api_router.post("/tracker/lunch")
-async def track_lunch(eaten: bool, current_user: dict = Depends(get_current_user)):
+async def track_lunch(request: LunchRequest, current_user: dict = Depends(get_current_user)):
     today = datetime.now(timezone.utc).date().isoformat()
-    time = datetime.now(timezone.utc).isoformat() if eaten else None
+    time = datetime.now(timezone.utc).isoformat() if request.eaten else None
     await db.lunch_tracker.update_one(
         {"user_email": current_user["email"], "date": today},
-        {"$set": {"eaten": eaten, "time": time, "date": today, "user_email": current_user["email"]}},
+        {"$set": {"eaten": request.eaten, "time": time, "date": today, "user_email": current_user["email"]}},
         upsert=True
     )
     return {"message": "Lunch tracked successfully"}
