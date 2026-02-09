@@ -1,34 +1,52 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+.App {
+  min-height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.voice-button {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  z-index: 50;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: hsl(10, 70%, 55%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.voice-button:hover {
+  background: hsl(10, 70%, 45%);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
-.App-link {
-    color: #61dafb;
+.voice-button:active {
+  transform: scale(0.95);
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.voice-button.listening {
+  background: hsl(0, 70%, 60%);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 10px 25px rgba(220, 38, 38, 0.4);
+  }
+  50% {
+    box-shadow: 0 10px 40px rgba(220, 38, 38, 0.7);
+  }
+}
+
+@media (max-width: 768px) {
+  .voice-button {
+    bottom: 90px;
+    right: 16px;
+  }
 }
