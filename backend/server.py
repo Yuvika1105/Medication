@@ -68,7 +68,7 @@ class UserProfile(BaseModel):
     age: Optional[int] = None
     phone: Optional[str] = None
     diseases: Optional[List[str]] = []
-    created_at: str
+    created_at: Optional[str] = None
 
 class MedicationCreate(BaseModel):
     name: str
