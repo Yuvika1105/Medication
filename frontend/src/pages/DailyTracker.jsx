@@ -61,7 +61,7 @@ export default function DailyTracker({ token }) {
 
   const updateWater = async () => {
     try {
-      await axios.post(`${API}/tracker/water`, waterGlasses, {
+      await axios.post(`${API}/tracker/water`, { glasses: waterGlasses }, {
         headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
       });
       toast.success('Water intake updated');
@@ -74,7 +74,7 @@ export default function DailyTracker({ token }) {
   const toggleLunch = async () => {
     try {
       const newLunchStatus = !todayTracker.lunch;
-      await axios.post(`${API}/tracker/lunch`, newLunchStatus, {
+      await axios.post(`${API}/tracker/lunch`, { eaten: newLunchStatus }, {
         headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
       });
       toast.success(newLunchStatus ? 'Lunch marked as eaten' : 'Lunch marked as not eaten');
