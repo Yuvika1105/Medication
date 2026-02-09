@@ -189,13 +189,15 @@ class MedBuddyAPITester:
 
     def test_track_water(self):
         """Test track water intake"""
-        success, result = self.make_request('POST', '/tracker/water', 5, 200)
+        water_data = {"glasses": 5}
+        success, result = self.make_request('POST', '/tracker/water', water_data, 200)
         self.log_test("Track Water", success, result if not success else "")
         return success
 
     def test_track_lunch(self):
         """Test track lunch"""
-        success, result = self.make_request('POST', '/tracker/lunch', True, 200)
+        lunch_data = {"eaten": True}
+        success, result = self.make_request('POST', '/tracker/lunch', lunch_data, 200)
         self.log_test("Track Lunch", success, result if not success else "")
         return success
 
