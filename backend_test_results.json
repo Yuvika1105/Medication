@@ -1,0 +1,94 @@
+{
+  "summary": {
+    "total_tests": 17,
+    "passed_tests": 14,
+    "success_rate": 82.35294117647058
+  },
+  "detailed_results": [
+    {
+      "test": "User Registration",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "User Login",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Get Profile",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Update Profile",
+      "success": false,
+      "details": "Status: 422, Response: {\"detail\":[{\"type\":\"missing\",\"loc\":[\"body\",\"created_at\"],\"msg\":\"Field required\",\"input\":{\"name\":\"Test User 074516\",\"email\":\"testuser074516@example.com\",\"age\":70,\"phone\":\"+9876543210\",\"diseases\":[\"Diabetes\",\"Hypertension\"]},\"url\":\"https://errors.pydantic.dev/2.12/v/missing\"}]}"
+    },
+    {
+      "test": "Create Medication",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Get Medications",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Update Medication",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Track Medication",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Delete Medication",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Get Today Tracker",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Track Water",
+      "success": false,
+      "details": "Status: 422, Response: {\"detail\":[{\"type\":\"missing\",\"loc\":[\"query\",\"glasses\"],\"msg\":\"Field required\",\"input\":null,\"url\":\"https://errors.pydantic.dev/2.12/v/missing\"}]}"
+    },
+    {
+      "test": "Track Lunch",
+      "success": false,
+      "details": "Status: 422, Response: {\"detail\":[{\"type\":\"missing\",\"loc\":[\"query\",\"eaten\"],\"msg\":\"Field required\",\"input\":null,\"url\":\"https://errors.pydantic.dev/2.12/v/missing\"}]}"
+    },
+    {
+      "test": "Send Message",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Get Messages",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Create Appointment",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Get Appointments",
+      "success": true,
+      "details": ""
+    },
+    {
+      "test": "Get Reminders",
+      "success": true,
+      "details": ""
+    }
+  ]
+}
