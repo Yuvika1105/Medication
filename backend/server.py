@@ -104,6 +104,12 @@ class DailyTracker(BaseModel):
     taken_at: Optional[str] = None
     missed: bool
 
+class WaterIntakeRequest(BaseModel):
+    glasses: int
+
+class LunchRequest(BaseModel):
+    eaten: bool
+
 class WaterIntake(BaseModel):
     user_email: str
     date: str
